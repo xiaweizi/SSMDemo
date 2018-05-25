@@ -40,6 +40,11 @@ public class CommonModel {
         setMsg(ConstantUtil.MSG_SUCCESS);
     }
 
+    public void setSuccess(String msg) {
+        setCode(ConstantUtil.CODE_SUCCESS);
+        setMsg(msg);
+    }
+
     public void setFail() {
         setCode(ConstantUtil.CODE_FAIL);
         setMsg(ConstantUtil.MSG_FAIL);

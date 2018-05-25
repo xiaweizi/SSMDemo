@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaweizi.ssm.dao.UserDAO">
+    <!-- 目的：为 dao 接口方法提供 sql 语句配置 -->
+    <insert id="register">
+        INSERT INTO user (name, password) VALUES (#{name}, #{password})
+    </insert>
+
+    <select id="getUserInfo" resultType="UserModel">
+        SELECT * FROM user WHERE name = #{name}
+    </select>
+
+
+</mapper>
